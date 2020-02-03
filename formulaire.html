@@ -1,0 +1,36 @@
+<html>
+<head> <title> Formulaire</title> 
+    <link rel="stylesheet" href="classes.css">
+    <meta charset="utf-8"> </head>
+    <body class="corps"> <h1> Formulaire </h1><form class="form-js"> 
+        Saisir votre nom :  <input type="text" id="nom" size="15" class="nom"> <br> <br> 
+        Saisir votre prenom : <input type="text" id="prenom" size="15"> <br> <br>
+        Saisir votre e-mail : <input type="email" id="mail" size=15> <br> <br> 
+        Saisir votre mdp : <input type="password" id="mdp" size="15"> <br> <br> 
+        Confirmer votre mdp : <input type="password" id="mdp2" size="15"> <br> <br> 
+        <input type="button" id="inscrire" value="Inscription" onclick = formu()> </form></body>
+    
+       <script>
+           function formu(){
+            var surname = document.getElementById('nom'); 
+            var name = document.getElementById('prenom'); 
+            var email = document.getElementById('mail'); 
+            var mdp = document.getElementById('mdp'); 
+            var mdp2 = document.getElementById('mdp2'); 
+    
+               
+               if(surname.value=="" && name.value=="" && email.value=="" && mdp.value=="" && mdp2.value==""){
+                   alert("Tous les champs ne complets, veuillez les remplir!"); 
+               }
+               else{ 
+                   surname.className = "nom"; 
+               }
+               if (mdp.value!=mdp2.value){
+                   alert("Les deux mots de passe sont différents!"); 
+               }
+               
+           }
+           
+          
+    </script>
+</html>
