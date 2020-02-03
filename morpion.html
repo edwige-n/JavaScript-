@@ -1,0 +1,113 @@
+<html> 
+    <head> <title> Morpion</title>
+        <link rel="stylesheet" href="morpion.css"> 
+     </head>
+    
+ <body> 
+    
+    <table> 
+    <thead><tr> 
+        <th colspan="3"> 
+         Morpion
+        </th>
+         </tr></thead>
+        <tbody> 
+     <tr><td id="cases1" onclick=morpion(cases1)> </td>
+         <td id="cases2" onclick=morpion(cases2)> </td> 
+         <td id="cases3" onclick=morpion(cases3)> </td> </tr>
+        <tr>
+         <td id="cases4" onclick=morpion(cases4)> </td>
+        <td id="cases5" onclick=morpion(cases5)>   </td>
+         <td id="cases6" onclick=morpion(cases6)>  </td> </tr> <tr> 
+        <td id="cases7" onclick=morpion(cases7)>   </td>
+        <td id="cases8" onclick=morpion(cases8)>  </td>
+        <td id="cases9" onclick=morpion(cases9)>  </td></tr>
+        </tbody> 
+     </table>
+    
+     <script>
+         var cases1 = document.getElementById("cases1"); 
+         var cases2 = document.getElementById("cases2"); 
+         var cases3 = document.getElementById("cases3");
+         var cases4 = document.getElementById("cases4");
+         var cases5 = document.getElementById("cases5");
+         var cases6 = document.getElementById("cases6");
+         var cases7 = document.getElementById("cases7");
+         var cases8 = document.getElementById("cases8");
+         var cases9 = document.getElementById("cases9");
+         var test; 
+         window.joueur = 0;
+                      
+            
+    function morpion (test){
+         
+        if(joueur==0){
+            alert("Le joueur1 joue."); 
+            test.className = "cases3"; 
+            joueur = 1; 
+        }
+             else {
+                 alert("C'est le tour du joueur 2."); 
+                 test.className = "cases";
+                 joueur = 0; 
+             }
+       
+    
+             if(cases1.className == "cases3" && cases2.className == "cases3" && cases3.className == "cases3"){
+                 alert("Le joueur 1 a gagné");  
+             }
+             if(cases1.className == "cases" && cases2.className == "cases" && cases3.className == "cases"){
+                 alert("Le joueur 2 a gagné"); 
+             }
+             if(cases4.className == "cases3" && cases5.className == "cases3" && cases6.className == "cases3"){
+                 alert("Le joueur 1 a gagné"); 
+             }
+             if(cases4.className == "cases" && cases5.className == "cases" && cases6.className == "cases"){
+                 alert("Le joueur 2 a gagné"); 
+             }
+             if(cases7.className == "cases3" && cases8.className == "cases3" && cases9.className == "cases3"){
+                 alert("Le joueur 1 a gagné"); 
+             }
+              if(cases7.className == "cases" && cases8.className == "cases" && cases9.className == "cases"){
+                  alert("Le joueur 2 a gagné"); 
+              }
+             if(cases1.className == "cases3" && cases4.className == "cases3" && cases7.className == "cases3"){
+                 alert("Le joueur 1 a gagné"); 
+             }
+             if(cases1.className == "cases" && cases4.className == "cases" && cases7.className == "cases"){
+                 alert("Le joueur 2 a gagné"); 
+             }
+             if(cases2.className ="cases3" && cases5.className == "cases3" && cases8.className == "cases3"){
+                 alert("Le joueur 1 a gagné"); 
+             }
+             if(cases2.className == "cases" && cases5.className == "cases" && cases8.className == "cases"){
+                 alert("Le joueur 2 a gagné"); 
+             }
+             if(cases3.className == "cases3" && cases6.className == "cases3" && cases9.className == "cases3"){
+                 alert("Le joueur 1 a gagné"); 
+             }
+              if(cases3.className == "cases" && cases6.className == "cases" && cases9.className == "cases"){
+                  alert("Le joueur 2 a gagné"); 
+              }
+            if(cases1.className == "cases3" && cases5.className == "cases3" && cases9.className == "cases3"){
+                alert("Le joueur 1 a gagné"); 
+            }
+             if(cases1.className == "cases" && cases5.className == "cases" && cases9.className == "cases"){
+                 alert("Le joueur 2 a gagné"); 
+             }
+             if(cases3.className == "cases3" && cases5.className == "cases3" && cases7.className == "cases3"){
+                 alert("Le joueur 1 a gagné"); 
+             }
+             if(cases3.className == "cases" && cases5.className == "cases" && cases7.className == "cases"){
+                 alert("Le joueur 2 a gagné"); 
+             }
+         }
+         
+         
+         
+      
+         
+                      
+     </script>
+    </body>
+    

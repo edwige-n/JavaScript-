@@ -1,0 +1,20 @@
+table {
+text-align: center; 
+
+background-color: aquamarine; 
+border: 3px; 
+border-radius: 10px; 
+}
+td {
+width:200px;
+height:200px;
+}
+.cases{
+    background-color: aliceblue; 
+}
+.cases2 {
+    background-color: aquamarine; 
+}
+.cases3 {
+    background-color: yellow; 
+}
