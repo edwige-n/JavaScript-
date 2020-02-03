@@ -1,0 +1,78 @@
+<html> 
+<head> <title> Calculatrice JS 
+    </title></head>
+
+    <body> 
+    
+   Saisissez vos valeurs : <br><br> <br>  <input type="text" size="10" id="val1"> <br> <br> <br> 
+                            <input type="text" size="10" id="val2"> 
+    <br> <br>
+  Choisissez votre opération :  <select id="calculselect"> <option> + </option>
+                                                           <option> - </option>
+                                                           <option> * </option>
+                                                           <option> / </option>
+    </select>
+    <input type="submit" id="calculer"> 
+    <br> <br> 
+    
+    <div id=resultat> Le résultat est : </div>
+    
+    <script> var cal1 = document.getElementById('val1');
+             var cal2 = document.getElementById('val2'); 
+             var operateur = document.getElementById('calculselect'); 
+    
+        function calcul (cal1,cal2,operateur){
+            
+            var c1 = Number(cal1);
+            var c2 = Number(cal2); 
+            
+           if (isNaN(c1) || isNaN(c2)) {
+              alert("Ce n'est pas un nombre");
+               } 
+            else {
+            parseFloat(c1,10); 
+            parseFloat(c2,10); 
+            
+             if (operateur == '+'){
+                 var res = c1 + c2; 
+             }
+             else if (operateur == '-'){
+                 var res = c1 - c2; 
+             }
+             else if (operateur == '*'){
+                 var res = c1 * c2; 
+             }
+             else if (operateur == '/') {
+                 var res = c1 / c2; 
+             } 
+            return res; 
+               }
+        }
+        
+        var bouton = document.getElementById('calculer'); 
+        var resultat = document.getElementById('resultat'); 
+        bouton.onclick = function() { 
+             var res = calcul(cal1.value,cal2.value,operateur.value); 
+             resultat.innerHTML = res; 
+        }
+        
+        
+        function pgcd(a,b){
+            var m = a; 
+            var n = b; 
+            var t = m; 
+            
+            while (n>0) {
+               var t = m % n; 
+               var m = n 
+               var n = t 
+                return m; 
+            }
+        }
+        
+        
+        
+             </script>
+    
+    </body>
+</html>
